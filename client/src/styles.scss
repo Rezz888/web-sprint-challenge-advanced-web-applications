@@ -36,15 +36,16 @@ body,
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 
   ul {
-    list-style: none;
-    text-align: start;
+    display: flex;
+  justify-content: flex-end;
+  margin: 0 0 36px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
     li {
-      cursor: pointer;
-      padding: 6px 0;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
+      list-style: none;
+      margin-right: 6px;
+      color: #204963;
     }
   }
 }
@@ -64,6 +65,7 @@ form {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
+  
 
   legend {
     padding-left: 40px;
@@ -81,6 +83,8 @@ form {
 
   input {
     width: 100px;
+    margin: 3px;
+    padding: 5px 5px;
   }
 }
 
@@ -95,5 +99,11 @@ form {
     color: white;
     padding: 3px 8px;
     margin-top: 16px;
+    
   }
+}
+a {
+  text-decoration: none;
+  padding: 6px;
+  color: #204963;
 }
