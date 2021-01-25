@@ -12,7 +12,7 @@ const Login = (props) => {
     const [credentials, setCredentials] = useState(initialState);
 
     const handleChange = (e)=> {
-      console.log(e.target.name, e.target.value)
+      // console.log(e.target.name, e.target.value)
       setCredentials({...credentials,
         [e.target.name] : e.target.value
       })
@@ -24,7 +24,7 @@ const Login = (props) => {
 
          axios.post("http://localhost:5000/api/login", credentials)
          .then(res => {
-           console.log(res);
+          //  console.log(res);
            localStorage.setItem("token", res.data.payload) 
            props.history.push("./bubble-page-this-is-protected")
          }
