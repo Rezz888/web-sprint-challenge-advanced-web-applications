@@ -48,7 +48,7 @@ const Login = (props) => {
       />
       
       <input 
-      type="text"
+      type="password"
       name= "password"
       id="password"
       value= {credentials.password}

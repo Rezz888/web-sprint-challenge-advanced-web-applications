@@ -3,6 +3,7 @@ import axios from "axios";
 
 import Bubbles from "./Bubbles";
 import ColorList from "./ColorList";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 const BubblePage = () => {
   const [colorList, setColorList] = useState([]);
@@ -10,8 +11,8 @@ const BubblePage = () => {
   // set that data to the colorList state property
 
   useEffect(()=> {
-    const token = localStorage.getItem("token");
-    axios.get("http://localhost:5000/api/colors", { headers: { authorization: token } })
+    
+    axiosWithAuth().get("/colors")
     .then(res => {
       console.log(res);
       setColorList(res.data)
